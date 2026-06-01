@@ -41,3 +41,60 @@ When creating diagrams, establish a style set similar to this unless requested o
     modbusarr/.style={-{Stealth[length=2.5mm]}, very thick, dashed, color=blue},
     container/.style={draw, dashed, rounded corners=4pt, inner sep=10pt}
 ]
+
+
+
+
+
+
+
+# Example Use Prompt
+
+Example Use prompt to draw a sample drawing in PSO algorithm in .md file : 
+
+# Optimized Prompt for PSO IEMS TikZ Flowchart
+
+
+
+Please generate a publication-ready flowchart of a Particle Swarm Optimization (PSO) algorithm for a Microgrid Energy Management System (IEMS) using LaTeX and TikZ. Output a fully compilable standalone file (`\documentclass[tikz, border=10pt]{standalone}`).
+
+
+
+The flowchart must clearly show the initialization, fitness evaluation, and velocity/position update steps. Crucially, include a decision block for the grid status, branching into:
+
+- **Grid-Connected Mode** (Objective: Minimize Energy Cost)
+
+  Equation: $C_{total} = \sum (P_{grid} \cdot \pi_{grid} + C_{dg} + C_{bess})$
+
+- **Islanded Mode** (Objective: Minimize Load Shedding)
+
+  Equation: $L_{shed} = \sum (P_{load} - P_{gen})$
+
+
+
+Inside the core optimization loop, replace the generic text with the actual PSO mathematical equations for updating velocity and position:
+
+
+
+**Velocity Update:**
+
+$$v_i(t+1) = w \cdot v_i(t) + c_1 r_1 (P_{best,i} - x_i(t)) + c_2 r_2 (G_{best} - x_i(t))$$
+
+
+
+**Position Update:**
+
+$$x_i(t+1) = x_i(t) + v_i(t+1)$$
+
+
+
+**Strict Constraints:** 1. **Typography:** Strictly adhere to the typography rules in my skill file: absolutely **NO emphasized fonts** (do not use `\textbf{}`, `\textit{}`, `\bfseries`, etc.) in any node, label, or text.
+
+2. **Math Mode:** Ensure all equations provided above are perfectly rendered inside the TikZ nodes using proper LaTeX math mode.
+
+3. **Routing:** Use the `positioning` library for relative node placement (e.g., `below=of...`) and `arrows.meta` for clean routing.
+
+4. **Grouping:** Use a dashed `container` block (via `fit` and `backgrounds` libraries) to visually group the core PSO optimization loop (evaluation, updating personal/global bests, applying equations, and constraint application). 
+
+
+
