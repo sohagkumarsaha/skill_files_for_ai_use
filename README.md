@@ -1,2 +1,2 @@
 # skill_files_for_ai_use
-Skill file for AI use
+The skill file for AI use
